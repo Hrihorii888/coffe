@@ -1,0 +1,144 @@
+.standards {
+  max-width: $width-content;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 894px;
+  margin: 88px auto 0;
+  overflow: hidden;
+
+  text-align: center;
+
+  &__titles {
+    position: absolute;
+    top: 90px;
+    left: 38%;
+  }
+  &__left {
+    width: 384px;
+    height: 894px;
+    background-color: $clr-primary;
+  }
+
+  &__carusel-wrapper {
+    width: 1170px;
+    position: absolute;
+    top: 222px;
+    left: 130px;
+  }
+  &__carusel-line {
+    position: relative;
+
+    display: flex;
+    z-index: 3;
+    column-gap: 30px;
+  }
+
+  &__carusel-colum {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    width: 560px;
+  }
+  &__carusel-btn-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $clr-accent;
+
+    position: absolute;
+    top: 470px;
+    right: 76px;
+    z-index: 6;
+  }
+}
+.standards::after {
+  content: "";
+  display: block;
+  z-index: 5;
+  position: absolute;
+  top: 222px;
+  right: 0px;
+  width: 100px;
+  height: 542px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.item-carusel {
+  width: 560px;
+  display: flex;
+  background-color: $clr-white;
+
+  &__img {
+    background-color: $clr-light-grey;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0 23px;
+  }
+  &__prase {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $clr-accent;
+    text-align: left;
+  }
+  &__title {
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+  }
+  &__text {
+    margin-top: 24px;
+    text-align: left;
+  }
+  &__row-btn {
+    margin-top: 18px;
+  }
+}
+
+.primery-btn {
+  width: 134px;
+  height: 32px;
+
+  color: $clr-white;
+  background-color: $clr-accent;
+  border-radius: 25px;
+}
+.second-btn {
+  width: 134px;
+  height: 32px;
+  background-color: $clr-white;
+  border-radius: 25px;
+}
+
+@media (max-width: 720px) {
+  .standards {
+    height: 100%;
+
+    &__left {
+      height: 1350px;
+    }
+
+    &__carusel-btn-next {
+      top: 653px;
+    }
+  }
+  .item-carusel {
+    display: block;
+
+    &__content {
+      margin: 15px 0;
+      align-items: center;
+    }
+  }
+}

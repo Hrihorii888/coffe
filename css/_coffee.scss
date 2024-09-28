@@ -1,0 +1,24 @@
+.coffee {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.coffee__list {
+  margin-top: 92px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.coffee__title {
+  margin-top: 42px;
+}
+.coffee__text {
+  margin-top: 12px;
+  max-width: 266px;
+  line-height: 22px;
+  text-align: center;
+}

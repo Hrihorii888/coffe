@@ -1,0 +1,26 @@
+.titles {
+  position: relative;
+  z-index: 5;
+  margin: 90px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title2 {
+  margin-top: 6px;
+  font-family: Montserrat;
+  font-size: $fz-big;
+  font-weight: $fw-900;
+  line-height: 34px;
+}
+.title3 {
+  font-size: $fz-medium;
+  font-weight: $fw-700;
+  line-height: 28px;
+}
+.title4 {
+  font-size: $fz-small;
+  font-weight: $fw-600;
+  line-height: 24px;
+}

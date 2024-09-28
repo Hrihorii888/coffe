@@ -1,0 +1,169 @@
+.giftset {
+  position: relative;
+
+  height: 802px;
+  width: $width-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__tabs {
+    display: flex;
+    position: absolute;
+    top: 216px;
+    left: 130px;
+  }
+
+  &__tabs-btn {
+    position: absolute;
+    right: -88px;
+    width: 88px;
+    height: 154px;
+
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 34px;
+
+    background-color: #dadada;
+    opacity: 0.3;
+
+    &--1 {
+      top: 0;
+    }
+    &--2 {
+      top: 154px;
+    }
+    &--3 {
+      top: 308px;
+    }
+  }
+}
+.active > .giftset__tabs-btn {
+  color: $clr-primary;
+  opacity: 1;
+  background-color: $clr-white;
+}
+.giftset::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  //width: 1076px;
+  height: 802px;
+  background-color: $clr-light-grey;
+  z-index: -1;
+}
+
+.label {
+  display: flex;
+  column-gap: 12px;
+
+  &__data {
+    font-weight: $fw-600;
+  }
+}
+
+.tab {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  &__img {
+    position: relative;
+    padding-top: 51px;
+  }
+  &__img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 40%;
+    height: 100%;
+    background-color: $clr-white;
+  }
+  &__content {
+    padding: 64px 50px 64px 91px;
+
+    background-color: $clr-white;
+  }
+  &__prace {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $clr-accent;
+    text-align: left;
+  }
+
+  &__text {
+    width: 430px;
+    margin: 12px 0 24px;
+  }
+  &__labels {
+    display: flex;
+    column-gap: 38px;
+    margin-bottom: 46px;
+  }
+  &__rowBtn {
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.tab.active {
+  z-index: 1;
+}
+
+@media (max-width: 1300px) {
+  .giftset {
+    &__tabs {
+      left: 30px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .giftset {
+    height: 1200px;
+    width: 100%;
+    &__tabs {
+      left: 10%;
+    }
+  }
+
+  .tab {
+    display: block;
+
+    &__img::after {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .giftset {
+    &__tabs-btn {
+      position: absolute;
+      top: -88px;
+      left: 0px;
+
+      &--1 {
+        left: 0px;
+      }
+      &--2 {
+        left: 90px;
+      }
+      &--3 {
+        left: 178px;
+      }
+    }
+  }
+  .tab {
+    margin-top: 30px;
+  }
+}
